@@ -1,0 +1,116 @@
+:root {
+    --primary: #ED6436;
+    --secondary: #65C178;
+    --white: #fff;
+    --dark: #181818;
+  }
+  
+  body {
+    background: linear-gradient(to right bottom, var(--dark), #2a2a2a);
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .auth-card {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .auth-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .auth-image {
+    background: linear-gradient(rgba(24, 24, 24, 0.4), rgba(24, 24, 24, 0.4)), 
+                url('https://images.unsplash.com/photo-1507146426996-ef05306b995a');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .auth-content {
+    padding: 2.5rem;
+  }
+  
+  .form-control {
+    border: 2px solid #eee;
+    border-radius: 8px;
+    padding: 0.875rem 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(237, 100, 54, 0.2);
+  }
+  
+  .btn-primary {
+    background: var(--primary);
+    border: none;
+    padding: 0.875rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background: #e05a2e;
+    transform: translateY(-2px);
+  }
+  
+  .auth-link {
+    color: var(--secondary);
+    font-weight: 500;
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .auth-link:hover {
+    color: var(--primary);
+  }
+  
+  .image-text {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    color: var(--white);
+  }
+  
+  .image-text h2 {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .divider {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .divider-text {
+    padding: 0 1rem;
+    color: #666;
+    font-size: 0.875rem;
+  }
+  
+  @media (max-width: 768px) {
+    .auth-content {
+      padding: 1.5rem;
+    }
+    
+    .image-text {
+      left: 1.5rem;
+      bottom: 1.5rem;
+    }
+  }
